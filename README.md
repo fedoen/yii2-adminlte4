@@ -1,1 +1,2 @@
-AdminLTE 3 for Yii2
+AdminLTE 3 Asset Bundle
+=======================
