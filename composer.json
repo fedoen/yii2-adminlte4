@@ -1,0 +1,28 @@
+{
+    "name": "fedoen/yii2-adminlte3",
+    "description": "AdminLTE 3 theme asset bundle for Yii 2.0 Framework",
+    "type": "yii2-extension",
+    "keywords": ["yii2","extension","adminlte","admin","theme","backend","asset","css","less"],
+    "license": "BSD-3-Clause",
+    "authors": [
+        {
+            "name": "Emil Fedorciuc",
+            "email": "fedoen@gmail.com"
+        }
+    ],
+    "require": {
+        "yiisoft/yii2": "2.*",
+        "yiisoft/yii2-bootstrap5": "~2.0.2",
+        "almasaeed2010/adminlte": "^2.4.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "fedoen\\yii2-adminlte-asset\\": ""
+        }
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.0.x-dev"
+        }
+    }
+}
