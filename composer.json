@@ -18,7 +18,7 @@
     },
     "autoload": {
         "psr-4": {
-            "fedoen\\yii2-adminlte-asset\\": ""
+            "fedoen\\yii2-adminlte3\\": ""
         }
     },
     "extra": {
