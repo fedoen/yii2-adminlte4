@@ -10,7 +10,7 @@ use yii\web\AssetBundle as BaseAdminLteAsset;
  */
 class AdminLteAsset extends BaseAdminLteAsset
 {
-    public $sourcePath = '@vendor/fedoen/adminlte3/dist';
+    public $sourcePath = '@vendor/fedoen/yii2-adminlte3/dist';
     public $css = [
         'css/AdminLTE.min.css',
     ];
