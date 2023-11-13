@@ -28,7 +28,7 @@ class AdminLteAsset extends BaseAdminLteAsset
      * @var string|bool Choose skin color, eg. `'skin-blue'` or set `false` to disable skin loading
      * @see https://almsaeedstudio.com/themes/AdminLTE/documentation/index.html#layout
      */
-    public $skin = '_all-skins';
+    public $skin = null; //update adminLTE 3 doesn't have skins
 
     /**
      * @inheritdoc
