@@ -138,7 +138,7 @@ When it's NOT activated, the fc-button classes won't even be in the DOM.
   /* reset */
 
 }
-.fc .fc-button {
+.fc-button {
     border-radius: 0;
     overflow: visible;
     text-transform: none;
@@ -147,17 +147,17 @@ When it's NOT activated, the fc-button classes won't even be in the DOM.
     font-size: inherit;
     line-height: inherit;
   }
-.fc .fc-button:focus {
+.fc-button:focus {
     outline: 1px dotted;
     outline: 5px auto -webkit-focus-ring-color;
   }
-.fc .fc-button {
+.fc-button {
     -webkit-appearance: button;
   }
-.fc .fc-button:not(:disabled) {
+.fc-button:not(:disabled) {
     cursor: pointer;
   }
-.fc .fc-button::-moz-focus-inner {
+.fc-button::-moz-focus-inner {
     padding: 0;
     border-style: none;
   }
@@ -166,7 +166,7 @@ When it's NOT activated, the fc-button classes won't even be in the DOM.
   /* theme */
 
 }
-.fc .fc-button {
+.fc-button {
     display: inline-block;
     font-weight: 400;
     text-align: center;
@@ -182,14 +182,14 @@ When it's NOT activated, the fc-button classes won't even be in the DOM.
     line-height: 1.5;
     border-radius: 0.25em;
   }
-.fc .fc-button:hover {
+.fc-button:hover {
     text-decoration: none;
   }
-.fc .fc-button:focus {
+.fc-button:focus {
     outline: 0;
     box-shadow: 0 0 0 0.2rem rgba(44, 62, 80, 0.25);
   }
-.fc .fc-button:disabled {
+.fc-button:disabled {
     opacity: 0.65;
   }
 .fc {
@@ -197,7 +197,7 @@ When it's NOT activated, the fc-button classes won't even be in the DOM.
   /* "primary" coloring */
 
 }
-.fc .fc-button-primary {
+.fc-button-primary {
     color: #fff;
     color: var(--fc-button-text-color, #fff);
     background-color: #2C3E50;
@@ -205,7 +205,7 @@ When it's NOT activated, the fc-button classes won't even be in the DOM.
     border-color: #2C3E50;
     border-color: var(--fc-button-border-color, #2C3E50);
   }
-.fc .fc-button-primary:hover {
+.fc-button-primary:hover {
     color: #fff;
     color: var(--fc-button-text-color, #fff);
     background-color: #1e2b37;
@@ -213,7 +213,7 @@ When it's NOT activated, the fc-button classes won't even be in the DOM.
     border-color: #1a252f;
     border-color: var(--fc-button-hover-border-color, #1a252f);
   }
-.fc .fc-button-primary:disabled { /* not DRY */
+.fc-button-primary:disabled { /* not DRY */
     color: #fff;
     color: var(--fc-button-text-color, #fff);
     background-color: #2C3E50;
@@ -221,11 +221,11 @@ When it's NOT activated, the fc-button classes won't even be in the DOM.
     border-color: #2C3E50;
     border-color: var(--fc-button-border-color, #2C3E50); /* overrides :hover */
   }
-.fc .fc-button-primary:focus {
+.fc-button-primary:focus {
     box-shadow: 0 0 0 0.2rem rgba(76, 91, 106, 0.5);
   }
-.fc .fc-button-primary:not(:disabled):active,
-  .fc .fc-button-primary:not(:disabled).fc-button-active {
+.fc-button-primary:not(:disabled):active,
+  .fc-button-primary:not(:disabled).fc-button-active {
     color: #fff;
     color: var(--fc-button-text-color, #fff);
     background-color: #1a252f;
@@ -233,8 +233,8 @@ When it's NOT activated, the fc-button classes won't even be in the DOM.
     border-color: #151e27;
     border-color: var(--fc-button-active-border-color, #151e27);
   }
-.fc .fc-button-primary:not(:disabled):active:focus,
-  .fc .fc-button-primary:not(:disabled).fc-button-active:focus {
+.fc-button-primary:not(:disabled):active:focus,
+  .fc-button-primary:not(:disabled).fc-button-active:focus {
     box-shadow: 0 0 0 0.2rem rgba(76, 91, 106, 0.5);
   }
 .fc {
@@ -242,25 +242,25 @@ When it's NOT activated, the fc-button classes won't even be in the DOM.
   /* icons within buttons */
 
 }
-.fc .fc-button .fc-icon {
+.fc-button .fc-icon {
     vertical-align: middle;
     font-size: 1.5em; /* bump up the size (but don't make it bigger than line-height of button, which is 1.5em also) */
   }
-.fc .fc-button-group {
+.fc-button-group {
     position: relative;
     display: inline-flex;
     vertical-align: middle;
   }
-.fc .fc-button-group > .fc-button {
+.fc-button-group > .fc-button {
     position: relative;
     flex: 1 1 auto;
   }
-.fc .fc-button-group > .fc-button:hover {
+.fc-button-group > .fc-button:hover {
     z-index: 1;
   }
-.fc .fc-button-group > .fc-button:focus,
-  .fc .fc-button-group > .fc-button:active,
-  .fc .fc-button-group > .fc-button.fc-button-active {
+.fc-button-group > .fc-button:focus,
+  .fc-button-group > .fc-button:active,
+  .fc-button-group > .fc-button.fc-button-active {
     z-index: 1;
   }
 .fc-direction-ltr .fc-button-group > .fc-button:not(:first-child) {
@@ -281,18 +281,18 @@ When it's NOT activated, the fc-button classes won't even be in the DOM.
     border-top-left-radius: 0;
     border-bottom-left-radius: 0;
   }
-.fc .fc-toolbar {
+.fc-toolbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
   }
-.fc .fc-toolbar.fc-header-toolbar {
+.fc-toolbar.fc-header-toolbar {
     margin-bottom: 1.5em;
   }
-.fc .fc-toolbar.fc-footer-toolbar {
+.fc-toolbar.fc-footer-toolbar {
     margin-top: 1.5em;
   }
-.fc .fc-toolbar-title {
+.fc-toolbar-title {
     font-size: 1.75em;
     margin: 0;
   }
@@ -305,28 +305,28 @@ When it's NOT activated, the fc-button classes won't even be in the DOM.
 .fc-direction-rtl .fc-toolbar-ltr { /* when the toolbar-chunk positioning system is explicitly left-to-right */
     flex-direction: row-reverse;
   }
-.fc .fc-scroller {
+.fc-scroller {
     -webkit-overflow-scrolling: touch;
     position: relative; /* for abs-positioned elements within */
   }
-.fc .fc-scroller-liquid {
+.fc-scroller-liquid {
     height: 100%;
   }
-.fc .fc-scroller-liquid-absolute {
+.fc-scroller-liquid-absolute {
     position: absolute;
     top: 0;
     right: 0;
     left: 0;
     bottom: 0;
   }
-.fc .fc-scroller-harness {
+.fc-scroller-harness {
     position: relative;
     overflow: hidden;
     direction: ltr;
       /* hack for chrome computing the scroller's right/left wrong for rtl. undone below... */
       /* TODO: demonstrate in codepen */
   }
-.fc .fc-scroller-harness-liquid {
+.fc-scroller-harness-liquid {
     height: 100%;
   }
 .fc-direction-rtl .fc-scroller-harness > .fc-scroller { /* undo above hack */
@@ -336,51 +336,51 @@ When it's NOT activated, the fc-button classes won't even be in the DOM.
     border: 1px solid #ddd;
     border: 1px solid var(--fc-border-color, #ddd); /* bootstrap does this. match */
   }
-.fc .fc-scrollgrid,
-    .fc .fc-scrollgrid table { /* all tables (self included) */
+.fc-scrollgrid,
+    .fc-scrollgrid table { /* all tables (self included) */
       width: 100%; /* because tables don't normally do this */
       table-layout: fixed;
     }
-.fc .fc-scrollgrid table { /* inner tables */
+.fc-scrollgrid table { /* inner tables */
       border-top-style: hidden;
       border-left-style: hidden;
       border-right-style: hidden;
     }
-.fc .fc-scrollgrid {
+.fc-scrollgrid {
 
     border-collapse: separate;
     border-right-width: 0;
     border-bottom-width: 0;
 
   }
-.fc .fc-scrollgrid-liquid {
+.fc-scrollgrid-liquid {
     height: 100%;
   }
-.fc .fc-scrollgrid-section { /* a <tr> */
+.fc-scrollgrid-section { /* a <tr> */
     height: 1px /* better than 0, for firefox */
 
   }
-.fc .fc-scrollgrid-section > td {
+.fc-scrollgrid-section > td {
       height: 1px; /* needs a height so inner div within grow. better than 0, for firefox */
     }
-.fc .fc-scrollgrid-section table {
+.fc-scrollgrid-section table {
       height: 1px;
         /* for most browsers, if a height isn't set on the table, can't do liquid-height within cells */
         /* serves as a min-height. harmless */
     }
-.fc .fc-scrollgrid-section-liquid > td {
+.fc-scrollgrid-section-liquid > td {
       height: 100%; /* better than `auto`, for firefox */
     }
-.fc .fc-scrollgrid-section > * {
+.fc-scrollgrid-section > * {
     border-top-width: 0;
     border-left-width: 0;
   }
-.fc .fc-scrollgrid-section-header > *,
-  .fc .fc-scrollgrid-section-footer > * {
+.fc-scrollgrid-section-header > *,
+  .fc-scrollgrid-section-footer > * {
     border-bottom-width: 0;
   }
-.fc .fc-scrollgrid-section-body table,
-  .fc .fc-scrollgrid-section-footer table {
+.fc-scrollgrid-section-body table,
+  .fc-scrollgrid-section-footer table {
     border-bottom-style: hidden; /* head keeps its bottom border tho */
   }
 .fc {
@@ -388,28 +388,28 @@ When it's NOT activated, the fc-button classes won't even be in the DOM.
   /* stickiness */
 
 }
-.fc .fc-scrollgrid-section-sticky > * {
+.fc-scrollgrid-section-sticky > * {
     background: #fff;
     background: var(--fc-page-bg-color, #fff);
     position: sticky;
     z-index: 3; /* TODO: var */
     /* TODO: box-shadow when sticking */
   }
-.fc .fc-scrollgrid-section-header.fc-scrollgrid-section-sticky > * {
+.fc-scrollgrid-section-header.fc-scrollgrid-section-sticky > * {
     top: 0; /* because border-sharing causes a gap at the top */
       /* TODO: give safari -1. has bug */
   }
-.fc .fc-scrollgrid-section-footer.fc-scrollgrid-section-sticky > * {
+.fc-scrollgrid-section-footer.fc-scrollgrid-section-sticky > * {
     bottom: 0; /* known bug: bottom-stickiness doesn't work in safari */
   }
-.fc .fc-scrollgrid-sticky-shim { /* for horizontal scrollbar */
+.fc-scrollgrid-sticky-shim { /* for horizontal scrollbar */
     height: 1px; /* needs height to create scrollbars */
     margin-bottom: -1px;
   }
 .fc-sticky { /* no .fc wrap because used as child of body */
   position: sticky;
 }
-.fc .fc-view-harness {
+.fc-view-harness {
     flex-grow: 1; /* because this harness is WITHIN the .fc's flexbox */
     position: relative;
   }
@@ -418,20 +418,20 @@ When it's NOT activated, the fc-button classes won't even be in the DOM.
   /* when the harness controls the height, make the view liquid */
 
 }
-.fc .fc-view-harness-active > .fc-view {
+.fc-view-harness-active > .fc-view {
     position: absolute;
     top: 0;
     right: 0;
     bottom: 0;
     left: 0;
   }
-.fc .fc-col-header-cell-cushion {
+.fc-col-header-cell-cushion {
     display: inline-block; /* x-browser for when sticky (when multi-tier header) */
     padding: 2px 4px;
   }
-.fc .fc-bg-event,
-  .fc .fc-non-business,
-  .fc .fc-highlight {
+.fc-bg-event,
+  .fc-non-business,
+  .fc-highlight {
     /* will always have a harness with position:relative/absolute, so absolutely expand */
     position: absolute;
     top: 0;
@@ -439,28 +439,28 @@ When it's NOT activated, the fc-button classes won't even be in the DOM.
     right: 0;
     bottom: 0;
   }
-.fc .fc-non-business {
+.fc-non-business {
     background: rgba(215, 215, 215, 0.3);
     background: var(--fc-non-business-color, rgba(215, 215, 215, 0.3));
   }
-.fc .fc-bg-event {
+.fc-bg-event {
     background: rgb(143, 223, 130);
     background: var(--fc-bg-event-color, rgb(143, 223, 130));
     opacity: 0.3;
     opacity: var(--fc-bg-event-opacity, 0.3)
   }
-.fc .fc-bg-event .fc-event-title {
+.fc-bg-event .fc-event-title {
       margin: .5em;
       font-size: .85em;
       font-size: var(--fc-small-font-size, .85em);
       font-style: italic;
     }
-.fc .fc-highlight {
+.fc-highlight {
     background: rgba(188, 232, 241, 0.3);
     background: var(--fc-highlight-color, rgba(188, 232, 241, 0.3));
   }
-.fc .fc-cell-shaded,
-  .fc .fc-day-disabled {
+.fc-cell-shaded,
+  .fc-day-disabled {
     background: rgba(208, 208, 208, 0.3);
     background: var(--fc-neutral-bg-color, rgba(208, 208, 208, 0.3));
   }
@@ -658,22 +658,22 @@ A HORIZONTAL event
   right: -4px;
   right: calc(-0.5 * var(--fc-event-resizer-dot-total-width, 8px));
 }
-.fc .fc-popover {
+.fc-popover {
     position: absolute;
     z-index: 9999;
     box-shadow: 0 2px 6px rgba(0,0,0,.15);
   }
-.fc .fc-popover-header {
+.fc-popover-header {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
     padding: 3px 4px;
   }
-.fc .fc-popover-title {
+.fc-popover-title {
     margin: 0 2px;
   }
-.fc .fc-popover-close {
+.fc-popover-close {
     cursor: pointer;
     opacity: 0.65;
     font-size: 1.1em;
@@ -706,15 +706,15 @@ A HORIZONTAL event
   content: "";
   clear: both;
   display: table; }
-.fc .fc-daygrid-body { /* a <div> that wraps the table */
+.fc-daygrid-body { /* a <div> that wraps the table */
     position: relative;
     z-index: 1; /* container inner z-index's because <tr>s can't do it */
   }
-.fc .fc-daygrid-day.fc-day-today {
+.fc-daygrid-day.fc-day-today {
       background-color: rgba(255, 220, 40, 0.15);
       background-color: var(--fc-today-bg-color, rgba(255, 220, 40, 0.15));
     }
-.fc .fc-daygrid-day-frame {
+.fc-daygrid-day-frame {
     position: relative;
     min-height: 100%; /* seems to work better than `height` because sets height after rows/cells naturally do it */
   }
@@ -723,11 +723,11 @@ A HORIZONTAL event
   /* cell top */
 
 }
-.fc .fc-daygrid-day-top {
+.fc-daygrid-day-top {
     display: flex;
     flex-direction: row-reverse;
   }
-.fc .fc-day-other .fc-daygrid-day-top {
+.fc-day-other .fc-daygrid-day-top {
     opacity: 0.3;
   }
 .fc {
@@ -735,7 +735,7 @@ A HORIZONTAL event
   /* day number (within cell top) */
 
 }
-.fc .fc-daygrid-day-number {
+.fc-daygrid-day-number {
     position: relative;
     z-index: 4;
     padding: 4px;
@@ -745,7 +745,7 @@ A HORIZONTAL event
   /* event container */
 
 }
-.fc .fc-daygrid-day-events {
+.fc-daygrid-day-events {
     margin-top: 1px; /* needs to be margin, not padding, so that available cell height can be computed */
   }
 .fc {
@@ -753,18 +753,18 @@ A HORIZONTAL event
   /* positioning for balanced vs natural */
 
 }
-.fc .fc-daygrid-body-balanced .fc-daygrid-day-events {
+.fc-daygrid-body-balanced .fc-daygrid-day-events {
       position: absolute;
       left: 0;
       right: 0;
     }
-.fc .fc-daygrid-body-unbalanced .fc-daygrid-day-events {
+.fc-daygrid-body-unbalanced .fc-daygrid-day-events {
       position: relative; /* for containing abs positioned event harnesses */
       min-height: 2em; /* in addition to being a min-height during natural height, equalizes the heights a little bit */
     }
-.fc .fc-daygrid-body-natural { /* can coexist with -unbalanced */
+.fc-daygrid-body-natural { /* can coexist with -unbalanced */
   }
-.fc .fc-daygrid-body-natural .fc-daygrid-day-events {
+.fc-daygrid-body-natural .fc-daygrid-day-events {
       margin-bottom: 1em;
     }
 .fc {
@@ -772,16 +772,16 @@ A HORIZONTAL event
   /* event harness */
 
 }
-.fc .fc-daygrid-event-harness {
+.fc-daygrid-event-harness {
     position: relative;
   }
-.fc .fc-daygrid-event-harness-abs {
+.fc-daygrid-event-harness-abs {
     position: absolute;
     top: 0; /* fallback coords for when cannot yet be computed */
     left: 0; /* */
     right: 0; /* */
   }
-.fc .fc-daygrid-bg-harness {
+.fc-daygrid-bg-harness {
     position: absolute;
     top: 0;
     bottom: 0;
@@ -791,19 +791,19 @@ A HORIZONTAL event
   /* bg content */
 
 }
-.fc .fc-daygrid-day-bg .fc-non-business { z-index: 1 }
-.fc .fc-daygrid-day-bg .fc-bg-event { z-index: 2 }
-.fc .fc-daygrid-day-bg .fc-highlight { z-index: 3 }
+.fc-daygrid-day-bg .fc-non-business { z-index: 1 }
+.fc-daygrid-day-bg .fc-bg-event { z-index: 2 }
+.fc-daygrid-day-bg .fc-highlight { z-index: 3 }
 .fc {
 
   /* events */
 
 }
-.fc .fc-daygrid-event {
+.fc-daygrid-event {
     z-index: 6;
     margin-top: 1px;
   }
-.fc .fc-daygrid-event.fc-event-mirror {
+.fc-daygrid-event.fc-event-mirror {
     z-index: 7;
   }
 .fc {
@@ -811,15 +811,15 @@ A HORIZONTAL event
   /* cell bottom (within day-events) */
 
 }
-.fc .fc-daygrid-day-bottom {
+.fc-daygrid-day-bottom {
     font-size: .85em;
     padding: 2px 3px 0
   }
-.fc .fc-daygrid-day-bottom:before {
+.fc-daygrid-day-bottom:before {
   content: "";
   clear: both;
   display: table; }
-.fc .fc-daygrid-more-link {
+.fc-daygrid-more-link {
     position: relative;
     z-index: 4;
     cursor: pointer;
@@ -829,7 +829,7 @@ A HORIZONTAL event
   /* week number (within frame) */
 
 }
-.fc .fc-daygrid-week-number {
+.fc-daygrid-week-number {
     position: absolute;
     z-index: 5;
     top: 0;
@@ -846,7 +846,7 @@ A HORIZONTAL event
   /* popover */
 
 }
-.fc .fc-more-popover .fc-popover-body {
+.fc-more-popover .fc-popover-body {
     min-width: 220px;
     padding: 10px;
   }
@@ -1047,44 +1047,44 @@ A VERTICAL event
       bottom: -4px;
       bottom: calc(var(--fc-event-resizer-dot-total-width, 8px) / -2);
     }
-.fc .fc-timegrid .fc-daygrid-body { /* the all-day daygrid within the timegrid view */
+.fc-timegrid .fc-daygrid-body { /* the all-day daygrid within the timegrid view */
     z-index: 2; /* put above the timegrid-body so that more-popover is above everything. TODO: better solution */
   }
-.fc .fc-timegrid-divider {
+.fc-timegrid-divider {
     padding: 0 0 2px; /* browsers get confused when you set height. use padding instead */
   }
-.fc .fc-timegrid-body {
+.fc-timegrid-body {
     position: relative;
     z-index: 1; /* scope the z-indexes of slots and cols */
     min-height: 100%; /* fill height always, even when slat table doesn't grow */
   }
-.fc .fc-timegrid-axis-chunk { /* for advanced ScrollGrid */
+.fc-timegrid-axis-chunk { /* for advanced ScrollGrid */
     position: relative /* offset parent for now-indicator-container */
 
   }
-.fc .fc-timegrid-axis-chunk > table {
+.fc-timegrid-axis-chunk > table {
       position: relative;
       z-index: 1; /* above the now-indicator-container */
     }
-.fc .fc-timegrid-slots {
+.fc-timegrid-slots {
     position: relative;
     z-index: 1;
   }
-.fc .fc-timegrid-slot { /* a <td> */
+.fc-timegrid-slot { /* a <td> */
     height: 1.5em;
     border-bottom: 0 /* each cell owns its top border */
   }
-.fc .fc-timegrid-slot:empty:before {
+.fc-timegrid-slot:empty:before {
       content: '\00a0'; /* make sure there's at least an empty space to create height for height syncing */
     }
-.fc .fc-timegrid-slot-minor {
+.fc-timegrid-slot-minor {
     border-top-style: dotted;
   }
-.fc .fc-timegrid-slot-label-cushion {
+.fc-timegrid-slot-label-cushion {
     display: inline-block;
     white-space: nowrap;
   }
-.fc .fc-timegrid-slot-label {
+.fc-timegrid-slot-label {
     vertical-align: middle; /* vertical align the slots */
   }
 .fc {
@@ -1093,8 +1093,8 @@ A VERTICAL event
   /* slots AND axis cells (top-left corner of view including the "all-day" text) */
 
 }
-.fc .fc-timegrid-axis-cushion,
-  .fc .fc-timegrid-slot-label-cushion {
+.fc-timegrid-axis-cushion,
+  .fc-timegrid-slot-label-cushion {
     padding: 0 4px;
   }
 .fc {
@@ -1104,16 +1104,16 @@ A VERTICAL event
   /* vertical align is more complicated, uses flexbox */
 
 }
-.fc .fc-timegrid-axis-frame-liquid {
+.fc-timegrid-axis-frame-liquid {
     height: 100%; /* will need liquid-hack in FF */
   }
-.fc .fc-timegrid-axis-frame {
+.fc-timegrid-axis-frame {
     overflow: hidden;
     display: flex;
     align-items: center; /* vertical align */
     justify-content: flex-end; /* horizontal align. matches text-align below */
   }
-.fc .fc-timegrid-axis-cushion {
+.fc-timegrid-axis-cushion {
     max-width: 60px; /* limits the width of the "all-day" text */
     flex-shrink: 0; /* allows text to expand how it normally would, regardless of constrained width */
   }
@@ -1131,11 +1131,11 @@ A VERTICAL event
   bottom: 0;
   left: 0;
   }
-.fc .fc-timegrid-col.fc-day-today {
+.fc-timegrid-col.fc-day-today {
       background-color: rgba(255, 220, 40, 0.15);
       background-color: var(--fc-today-bg-color, rgba(255, 220, 40, 0.15));
     }
-.fc .fc-timegrid-col-frame {
+.fc-timegrid-col-frame {
     min-height: 100%; /* liquid-hack is below */
     position: relative;
   }
@@ -1170,13 +1170,13 @@ A VERTICAL event
   /* bg */
 
 }
-.fc .fc-timegrid-col-bg {
+.fc-timegrid-col-bg {
     z-index: 2; /* TODO: kill */
   }
-.fc .fc-timegrid-col-bg .fc-non-business { z-index: 1 }
-.fc .fc-timegrid-col-bg .fc-bg-event { z-index: 2 }
-.fc .fc-timegrid-col-bg .fc-highlight { z-index: 3 }
-.fc .fc-timegrid-bg-harness {
+.fc-timegrid-col-bg .fc-non-business { z-index: 1 }
+.fc-timegrid-col-bg .fc-bg-event { z-index: 2 }
+.fc-timegrid-col-bg .fc-highlight { z-index: 3 }
+.fc-timegrid-bg-harness {
     position: absolute; /* top/bottom will be set by JS */
     left: 0;
     right: 0;
@@ -1188,7 +1188,7 @@ A VERTICAL event
   /* and they must be after the normal seg container to appear at a higher z-index) */
 
 }
-.fc .fc-timegrid-col-events {
+.fc-timegrid-col-events {
     z-index: 3;
     /* child event segs have z-indexes that are scoped within this div */
   }
@@ -1197,7 +1197,7 @@ A VERTICAL event
   /* now indicator */
 
 }
-.fc .fc-timegrid-now-indicator-container {
+.fc-timegrid-now-indicator-container {
     bottom: 0;
     overflow: hidden; /* don't let overflow of lines/arrows cause unnecessary scrolling */
     /* z-index is set on the individual elements */
@@ -1278,7 +1278,7 @@ A VERTICAL event
   /* line */
 
 }
-.fc .fc-timegrid-now-indicator-line {
+.fc-timegrid-now-indicator-line {
     position: absolute;
     z-index: 4;
     left: 0;
@@ -1293,7 +1293,7 @@ A VERTICAL event
   /* arrow */
 
 }
-.fc .fc-timegrid-now-indicator-arrow {
+.fc-timegrid-now-indicator-arrow {
     position: absolute;
     z-index: 4;
     margin-top: -5px; /* vertically center on top coordinate */
@@ -1332,7 +1332,7 @@ A VERTICAL event
   /* message when no events */
 
 }
-.fc .fc-list-empty {
+.fc-list-empty {
     background-color: rgba(208, 208, 208, 0.3);
     background-color: var(--fc-neutral-bg-color, rgba(208, 208, 208, 0.3));
     height: 100%;
@@ -1340,7 +1340,7 @@ A VERTICAL event
     justify-content: center;
     align-items: center; /* vertically aligns fc-list-empty-inner */
   }
-.fc .fc-list-empty-cushion {
+.fc-list-empty-cushion {
     margin: 5em 0;
   }
 .fc {
@@ -1349,15 +1349,15 @@ A VERTICAL event
   /* ---------------------------------------------------------------------------------------------------- */
 
 }
-.fc .fc-list-table {
+.fc-list-table {
     width: 100%;
     border-style: hidden; /* kill outer border on theme */
   }
-.fc .fc-list-table tr > * {
+.fc-list-table tr > * {
     border-left: 0;
     border-right: 0;
   }
-.fc .fc-list-sticky .fc-list-day > * { /* the cells */
+.fc-list-sticky .fc-list-day > * { /* the cells */
       position: sticky;
       top: 0;
       background: #fff;
@@ -1368,7 +1368,7 @@ A VERTICAL event
   /* only exists for aria reasons, hide for non-screen-readers */
 
 }
-.fc .fc-list-table thead {
+.fc-list-table thead {
     position: absolute;
     left: -10000px;
   }
@@ -1377,14 +1377,14 @@ A VERTICAL event
   /* the table's border-style:hidden gets confused by hidden thead. force-hide top border of first cell */
 
 }
-.fc .fc-list-table tbody > tr:first-child th {
+.fc-list-table tbody > tr:first-child th {
     border-top: 0;
   }
-.fc .fc-list-table th {
+.fc-list-table th {
     padding: 0; /* uses an inner-wrapper instead... */
   }
-.fc .fc-list-table td,
-  .fc .fc-list-day-cushion {
+.fc-list-table td,
+  .fc-list-day-cushion {
     padding: 8px 14px;
   }
 .fc {
@@ -1394,7 +1394,7 @@ A VERTICAL event
   /* ---------------------------------------------------------------------------------------------------- */
 
 }
-.fc .fc-list-day-cushion:after {
+.fc-list-day-cushion:after {
   content: "";
   clear: both;
   display: table; /* clear floating */
@@ -1414,10 +1414,10 @@ A VERTICAL event
 /* make the dot closer to the event title */
 .fc-direction-ltr .fc-list-table .fc-list-event-graphic { padding-right: 0 }
 .fc-direction-rtl .fc-list-table .fc-list-event-graphic { padding-left: 0 }
-.fc .fc-list-event.fc-event-forced-url {
+.fc-list-event.fc-event-forced-url {
     cursor: pointer; /* whole row will seem clickable */
   }
-.fc .fc-list-event:hover td {
+.fc-list-event:hover td {
     background-color: #f5f5f5;
     background-color: var(--fc-list-event-hover-bg-color, #f5f5f5);
   }
@@ -1426,12 +1426,12 @@ A VERTICAL event
   /* shrink certain cols */
 
 }
-.fc .fc-list-event-graphic,
-  .fc .fc-list-event-time {
+.fc-list-event-graphic,
+  .fc-list-event-time {
     white-space: nowrap;
     width: 1px;
   }
-.fc .fc-list-event-dot {
+.fc-list-event-dot {
     display: inline-block;
     box-sizing: content-box;
     width: 0;
@@ -1446,7 +1446,7 @@ A VERTICAL event
   /* reset <a> styling */
 
 }
-.fc .fc-list-event-title a {
+.fc-list-event-title a {
     color: inherit;
     text-decoration: none;
   }
@@ -1455,7 +1455,7 @@ A VERTICAL event
   /* underline link when hovering over any part of row */
 
 }
-.fc .fc-list-event.fc-event-forced-url:hover a {
+.fc-list-event.fc-event-forced-url:hover a {
     text-decoration: underline;
   }
 
