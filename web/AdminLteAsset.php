@@ -1,5 +1,5 @@
 <?php
-namespace fedoen\adminlte3\web;
+namespace fedoen\adminlte4\web;
 
 use yii\base\Exception;
 use yii\web\AssetBundle as BaseAdminLteAsset;
@@ -10,7 +10,7 @@ use yii\web\AssetBundle as BaseAdminLteAsset;
  */
 class AdminLteAsset extends BaseAdminLteAsset
 {
-    public $sourcePath = '@vendor/fedoen/yii2-adminlte3/dist';
+    public $sourcePath = '@fedoen/adminlte4/dist';
     public $css = [
         'css/adminlte.min.css',
     ];
