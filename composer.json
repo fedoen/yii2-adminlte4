@@ -1,6 +1,6 @@
 {
-    "name": "fedoen/yii2-adminlte3",
-    "description": "AdminLTE 3 theme asset bundle for Yii 2.0 Framework",
+    "name": "fedoen/yii2-adminlte4",
+    "description": "AdminLTE 4 theme asset bundle for Yii 2.0 Framework",
     "type": "yii2-extension",
     "keywords": ["yii2","extension","adminlte","admin","theme","backend","asset","css","less"],
     "license": "BSD-3-Clause",
@@ -18,7 +18,7 @@
     },
     "autoload": {
         "psr-4": {
-            "fedoen\\adminlte3\\": ""
+            "fedoen\\adminlte4\\": ""
         }
     },
     "extra": {
