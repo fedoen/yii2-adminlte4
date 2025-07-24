@@ -14,7 +14,7 @@ class Menu extends \yii\widgets\Menu
     /**
      * {@inheritdoc}
      */
-    public $linkTemplate = '<a class="nav-link {active}" href="{url}">{icon} {label}</a>';
+    public $linkTemplate = '<a class="nav-link {active}" href="{url}">{icon}<p>{label} {badge} {submenu}</p></a>';
     /**
      * {@inheritdoc}
      * Styles all labels of items on sidebar by AdminLTE
@@ -28,24 +28,23 @@ class Menu extends \yii\widgets\Menu
      * {@inheritdoc}
      */
     public $activateParents = true;
-    public $defaultIconHtml = '<i class="fas fa-circle nav-icon"></i> ';
+    public $defaultIconHtml = '<i class="nav-icon bi bi-circle"></i>';
     /**
      * {@inheritdoc}
      */
-    public $options = ['class' => 'nav nav-pills nav-sidebar flex-column', 'data-widget' => 'treeview'];
+    public $options = ['class' => 'nav sidebar-menu flex-column', 'data-lte-toggle' => 'treeview', 'role' => 'menu', 'data-accordion' => 'false'];
 
     /**
      * @var string is type that will be added to $item['icon'] if it exist.
-     * Font Awesome 5 added different icon types intead of everything starting with "fa fa-"
-     * Possible types are fab (brand), fas (solid), far (regular), fal (light), fad (duotone). 
-     * Some of them are only available for pro version of FA so check the https://fontawesome.com website
-     * @since 3.0
+     * Bootstrap Icons are used in AdminLTE4 instead of Font Awesome
+     * Use 'bi' for Bootstrap Icons
+     * @since 4.0
      */
-    public static $iconClassType = 'fas';
+    public static $iconClassType = 'bi';
     /**
      * @var string
      */
-    public static $iconClassPrefix = 'fa-';
+    public static $iconClassPrefix = '';
 
     private $noDefaultAction;
     private $noDefaultRoute;
@@ -94,9 +93,9 @@ class Menu extends \yii\widgets\Menu
         $submenu = '';
 
         if (isset($item['items'])) {
-            $submenu = '<i class="right fas fa-angle-left"></i>';
-            $labelTemplate = '<a class="nav-link ' . ($item['active'] ? 'active' : '') . '" href="{url}">{icon} {label}</a>';
-            $linkTemplate = '<a class="nav-link ' . ($item['active'] ? 'active' : '') . '" href="{url}">{icon} {label}</a>';
+            $submenu = '<i class="nav-arrow bi bi-chevron-right"></i>';
+            $labelTemplate = '<a class="nav-link ' . ($item['active'] ? 'active' : '') . '" href="{url}">{icon}<p>{label} {badge} {submenu}</p></a>';
+            $linkTemplate = '<a class="nav-link ' . ($item['active'] ? 'active' : '') . '" href="{url}">{icon}<p>{label} {badge} {submenu}</p></a>';
         } else {
             $labelTemplate = $this->labelTemplate;
             $linkTemplate = $this->linkTemplate;
@@ -105,7 +104,7 @@ class Menu extends \yii\widgets\Menu
         $replacements = [
             '{label}' => strtr($this->labelTemplate, ['{label}' => $item['label'], '{badge}' => $item['badge'], '{submenu}' => $submenu]),
             '{icon}' => empty($item['icon']) ? $this->defaultIconHtml
-                : '<i class="nav-icon ' . (isset($item['iconType']) ? $item['iconType'] : static::$iconClassType) . ' ' . static::$iconClassPrefix . $item['icon'] . '"></i> ',
+                : '<i class="nav-icon ' . (isset($item['iconType']) ? $item['iconType'] : static::$iconClassType) . ' ' . (static::$iconClassPrefix ? static::$iconClassPrefix : '') . $item['icon'] . '"></i>',
             '{url}' => isset($item['url']) ? Url::to($item['url']) : 'javascript:void(0);',
             '{active}' => $item['active'] ? $this->activeCssClass : '',
             // If item doesn't have url, make sure these placeholders get removed from output
@@ -150,9 +149,9 @@ class Menu extends \yii\widgets\Menu
                     '{items}' => $this->renderItems($item['items']),
                 ]);
 				if (isset($options['class'])) {
-					$options['class'] .= ' treeview';
+					$options['class'] .= ' has-treeview';
 				} else {
-					$options['class'] = 'treeview';
+					$options['class'] = 'has-treeview';
 				}
                 if($item['active']) {
                     $options['class'] .= ' menu-open';
